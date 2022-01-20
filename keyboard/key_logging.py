@@ -1,7 +1,5 @@
-from asyncio.proactor_events import constants
 import json
 from threading import Timer
-from tkinter.messagebox import NO
 from pynput import keyboard
 import os
 
